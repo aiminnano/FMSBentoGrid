@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Bento grid</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      font-family: "DM Sans", sans-serif;
+      background-color: rgb(231, 224, 216);
+    }
+    #container{
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 212px 225px 225px 212px;
+      grid-template-rows: 275px 55px 125px 225px;
+      width: 950px;
+      height: 755px;
+      gap: 25px;
+    }
+    *{
+      box-sizing: border-box;
+    }
+    .t{
+      border-radius: 10px;
+      background-color: gray;
+    }
+
+    .cas{
+      grid-row: span 2;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      font-size: 32px;
+      line-height: .9;
+      letter-spacing: -2px;
+      background-color: hsl(31, 66%, 93%);
+    }
+    
+    .casimg img{
+      width: 160px;  
+    }
+    
+    .cas div{
+      padding-left: 25px;
+    }
+    
+    .socmed{
+      grid-column: span 2;
+      
+    }
+    .sched{
+      grid-row: span 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      background-color: hsl(254, 88%, 90%);
+      overflow: hidden;
+    }
+    
+    
+    .quicker{
+      color: hsl(256, 67%, 59%); 
+    }
+
+    
+    .socmed{
+      background-color: hsl(256, 67%, 59%);
+      color: white;
+      gap: 20px;
+      font-size: 55px;
+      font-weight: 500;
+      padding: 20px;
+      text-align: center;
+      line-height: .9;
+    }
+
+    .s {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .rev{
+      font-size: 15px;
+      font-weight: 400;
+      gap: 5px;
+    }
+    .rev img{
+      width: 160px;
+    }
+    .ten{
+      color: hsl(39, 100%, 71%);
+    }
+
+    .schedimg img{
+      width: 425px;
+      padding-left: 135px;
+    }
+    .schedsocmed{
+      font-size: 27px;
+      padding-left: 30px;
+      padding-right: 20px;
+      font-weight: 600;
+      line-height: .9;
+      letter-spacing: -2px;
+      
+    }
+    .opti{
+      font-size: 17px;
+      font-weight: 400;
+      padding-left: 26px;
+      padding-right: 25px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .manmul{
+          grid-row: span 2;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          padding-left: 20px;
+          padding-right: 40px;
+          overflow: hidden;
+          gap: 15px;
+    }
+    .multiplat img{
+      width: 275px;
+      
+    }
+    .manacc{
+      font-size: 27px;
+      font-weight: 500;
+      line-height: .8;
+      letter-spacing: -1px;
+    }
+
+
+    .maintain{
+      grid-row: span 2;
+      background-color: hsl(39, 100%, 71%);
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      font-size: 27px;
+      font-weight: 500;
+      line-height: .8;
+      letter-spacing: -1px;
+      overflow: hidden;
+    }
+    .maintain img{
+      width: 175px;
+      padding-top: 15px;
+    }
+
+
+    .writeai{
+      grid-row: span 2;
+      background-color: hsl(39, 100%, 71%);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 22px;
+      font-size: 35px;
+      line-height: .8;
+      letter-spacing: -2px;
+      font-weight: 500;
+    }
+    .writeai img{
+      width: 195px;
+      padding-top: 62px;
+      padding-left: 10px;
+    }
+
+    .audgrow{
+      background-color: white;
+      padding: 20px;
+      padding-top: 10px;
+      font-size: 16px;
+    }
+    .audgrow img{
+      width: 160px;
+      padding-top: 40px;
+    }
+    .percent{
+      font-size: 55px;
+      font-weight: 500;
+    }
+    
+    .nonstop{
+      grid-column: span 2;
+      background-color: hsl(256, 67%, 59%);
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      padding-top: 25px;
+      font-size: 33px;
+      color: white;
+      line-height: .9;
+      letter-spacing: -1px;
+      gap: 5px;
+      font-weight: 500;
+    }
+
+    .nonstop img{
+      width: 210px;
+    }
+
+    @media(max-width: 375px){
+      #container{
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="container">
+  <div class="t cas">  
+    <div>Create and schedule content <em class="quicker">quicker.</em></div>
+    <div class="casimg"><img src="./assets/images/illustration-create-post.webp" alt="createpostbutton"></div>
+  </div>
+
+  <div class="s t socmed">
+    <div>Social Media <span class="ten">10x</span> <em>Faster</em> with AI</div>
+    <div class="s rev">
+      <div><img src="./assets/images/illustration-five-stars.webp" alt=""></div>
+      <div>Over 4,000 5-star reviews</div>
+    </div>
+  </div>
+
+  <div class="t sched">
+    <div class="schedsocmed">Schedule to social media.</div>
+    <div class="schedimg"><img src="./assets/images/illustration-schedule-posts.webp" alt="schedule"></div>
+    <div class="opti">Optimize post timings to publish content at the perfect time for your audience.</div>
+  </div> 
+
+  <div class="t manmul">
+    <div class="multiplat"><img src="./assets/images/illustration-multiple-platforms.webp" alt="platforms"></div>
+    <div class="manacc">Manage multiple accounts and platforms.</div>
+  </div>
+
+  <div class="t maintain">
+    <div>Maintain a consistent posting schedule.</div>
+    <div><img src="./assets/images/illustration-consistent-schedule.webp" alt="schedchecklist"></div>
+  </div>
+
+  <div class="t writeai">
+    <div>Write your content using AI.</div>
+    <div><img src="./assets/images/illustration-ai-content.webp" alt=""></div>
+  </div>
+
+  <div class="t audgrow">
+    <div class="percent">>56%</div>
+    <div class="fas">faster audience growth</div>
+    <div><img src="./assets/images/illustration-audience-growth.webp" alt="audience"></div>
+  </div>
+
+  <div class="t nonstop"> 
+    <div><img src="./assets/images/illustration-grow-followers.webp" alt="growthgraph"></div>
+    <div class="growf">Grow followers with non-stop content.</div>
+  </div> 
+
+  
+
+
+      
+</div>  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">aimin</a>.
+  </div>
+</body>
+</html>
