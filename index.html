@@ -27,12 +27,13 @@
       background-color: rgb(231, 224, 216);
     }
     #container{
-      height: 100vh;
+      
       display: grid;
       grid-template-columns: 212px 225px 225px 212px;
       grid-template-rows: 275px 55px 125px 225px;
-      width: 950px;
-      height: 755px;
+      max-width: 950px;
+      width: 100%;
+      height: auto;
       gap: 25px;
     }
     *{
@@ -232,6 +233,87 @@
     @media(max-width: 375px){
       #container{
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-width: 100%;
+        padding: 20px;
+      }
+      .t{
+        grid-column: auto;
+        
+        width: 100%;
+        margin: 0 ;
+      }
+      .cas {
+         order: 7; 
+         padding-top: 30px;
+         padding-bottom: 10px;
+      }
+      .socmed { 
+        order: 1; 
+        font-size: 45px;
+        padding: 40px;
+      }
+      .rev{
+        font-size: 18px;
+      }
+      .rev img{
+        width: 190px;
+      }
+
+      .manmul img{
+        width: 310px;
+      }
+      .sched { 
+        order: 4; 
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .manmul { 
+        order: 2; 
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .maintain {
+         order: 3; 
+         padding-bottom: 0px; 
+      }
+      .writeai {
+         order: 8; 
+      }
+      .audgrow {
+         order: 6; 
+      }
+      .nonstop {
+         order: 5; 
+      }
+      .schedimg img{
+      width: 300px;
+      padding-left: 5px;
+      }
+      .schedsocmed{
+        padding-top: 15px;
+      }
+      .opti{
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        letter-spacing: 0px;
+        padding-bottom: 15px;
+      }
+
+      .nonstop{
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+      }
+      .growf{
+        padding: 20px;
+        padding-bottom: 0px;
+      }
+      .writeai img{
+        width: 300px;
+        padding-top: 30px;
+        padding-bottom: 10px;
       }
     }
   </style>
